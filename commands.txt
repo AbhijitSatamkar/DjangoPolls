@@ -1,0 +1,88 @@
+snehabhi$ pip3 install virtualenv
+Requirement already satisfied: virtualenv in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages
+You are using pip version 9.0.1, however version 18.0 is available.
+You should consider upgrading via the 'pip install --upgrade pip' command.
+Snehals-MacBook-Air:DjangoProj snehabhi$ pip3 install virtualenv
+Requirement already satisfied: virtualenv in /Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages (15.1.0)
+Snehals-MacBook-Air:DjangoProj snehabhi$ cd proj
+bash: cd: proj: No such file or directory
+Snehals-MacBook-Air:DjangoProj snehabhi$ ls
+Snehals-MacBook-Air:DjangoProj snehabhi$ virtualenv -p python3 djenv
+Running virtualenv with interpreter /Library/Frameworks/Python.framework/Versions/3.6/bin/python3
+Using base prefix '/Library/Frameworks/Python.framework/Versions/3.6'
+================__-----
+source djenv/bin/activate
+deactivate
+=====--------===========
+
+(djenv) Snehals-MacBook-Air:DjangoProj snehabhi$ pip install django
+(djenv) Snehals-MacBook-Air:DjangoProj snehabhi$ django-admin startproject abhisite
+(djenv) Snehals-MacBook-Air:DjangoProj snehabhi$ python manage.py startapp polls
+python: can't open file 'manage.py': [Errno 2] No such file or directory
+(djenv) Snehals-MacBook-Air:DjangoProj snehabhi$ cd abhisite/
+(djenv) Snehals-MacBook-Air:abhisite snehabhi$ python manage.py startapp polls
+(djenv) Snehals-MacBook-Air:abhisite snehabhi$ 
+python manage.py runserver
+
+
+git init
+Initialized empty Git repository in /Users/snehabhi/PycharmProjects/DjangoProj/.git/
+(djenv) Snehals-MacBook-Air:DjangoProj snehabhi$ ls
+abhisite        commands.txt    djenv
+(djenv) Snehals-MacBook-Air:DjangoProj snehabhi$ ls -a
+.               ..              .git            .idea           abhisite        commands.txt    djenv
+(djenv) Snehals-MacBook-Air:DjangoProj snehabhi$ git add abhisite/
+(djenv) Snehals-MacBook-Air:DjangoProj snehabhi$ git commit -m "first commit"
+[master (root-commit) a7606be] first commit
+ 17 files changed, 189 insertions(+)
+ create mode 100644 abhisite/abhisite/__init__.py
+ create mode 100644 abhisite/abhisite/__pycache__/__init__.cpython-36.pyc
+ create mode 100644 abhisite/abhisite/__pycache__/settings.cpython-36.pyc
+ create mode 100644 abhisite/abhisite/__pycache__/urls.cpython-36.pyc
+ create mode 100644 abhisite/abhisite/__pycache__/wsgi.cpython-36.pyc
+ create mode 100644 abhisite/abhisite/settings.py
+ create mode 100644 abhisite/abhisite/urls.py
+ create mode 100644 abhisite/abhisite/wsgi.py
+ create mode 100644 abhisite/db.sqlite3
+ create mode 100755 abhisite/manage.py
+ create mode 100644 abhisite/polls/__init__.py
+ create mode 100644 abhisite/polls/admin.py
+ create mode 100644 abhisite/polls/apps.py
+ create mode 100644 abhisite/polls/migrations/__init__.py
+ create mode 100644 abhisite/polls/models.py
+ create mode 100644 abhisite/polls/tests.py
+ create mode 100644 abhisite/polls/views.py
+(djenv) Snehals-MacBook-Air:DjangoProj snehabhi$ git remote add djPolls https://github.com/AbhijitSatamkar/DjangoPolls.git
+(djenv) Snehals-MacBook-Air:DjangoProj snehabhi$ ls
+abhisite        commands.txt    djenv
+(djenv) Snehals-MacBook-Air:DjangoProj snehabhi$ cd abhisite/
+(djenv) Snehals-MacBook-Air:abhisite snehabhi$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+(djenv) Snehals-MacBook-Air:abhisite snehabhi$ python manage.py createsupersuer
+Unknown command: 'createsupersuer'. Did you mean createsuperuser?
+Type 'manage.py help' for usage.
+(djenv) Snehals-MacBook-Air:abhisite snehabhi$ python manage.py createsupersuser
+Unknown command: 'createsupersuser'. Did you mean createsuperuser?
+Type 'manage.py help' for usage.
+(djenv) Snehals-MacBook-Air:abhisite snehabhi$ python manage.py createsuperuser
+Username (leave blank to use 'snehabhi'): abhi
+Email address: 
+Password: 
+Password (again): 
+This password is too short. It must contain at least 8 characters.
+Bypass password validation and create user anyway? [y/N]: y
+Superuser created successfully.
+(djenv) Snehals-MacBook-Air:abhisite snehabhi$ python manage.py runserver
+
+
+
+
+
+
